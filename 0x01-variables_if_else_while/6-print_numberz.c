@@ -6,13 +6,11 @@
 */
 int main(void)
 {
-	char alphabet;
 	int count = 48;
 
 	while (count < 58)
 	{
-		alphabet = count;
-		putchar(alphabet);
+		putchar(count);
 		count++;
 	}
 	putchar(10);
