@@ -7,12 +7,10 @@
 int main(void)
 {
 	int count = 48;
-	char alphabet;
 
 	while (count < 58)
 	{
-		alphabet = count;
-		putchar(alphabet);
+		putchar(count);
 		if (count != 57)
 		{
 			putchar(44);
