@@ -6,33 +6,24 @@
 */
 int main(void)
 {
-	int tens;
-	int ones;
-	int t;
-	int o;
+	int i;
+	int j;
 
-	for (tens = '0'; tens <= '9'; tens++)
+	for (i = 0; i < 99; i++)
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		for (j = i + 1; j <= 99; j++)
 		{
-			for (t = tens; t <= '9'; t++)
+			putchar('0' + i / 10);
+			putchar('0' + i % 10);
+			putchar(' ');
+			putchar('0' + j / 10);
+			putchar('0' + j % 10);
+			if (i == 98 && j == 99)
 			{
-				for (o = '1'; o <= '9'; o++)
-				{
-					putchar(tens);
-					putchar(ones);
-					putchar(' ');
-					putchar(t);
-					putchar(o);
-					if (!((tens == '9' && ones == '8') &&
-								(t == '9' && o == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				o = '0';
+				break;
 			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
