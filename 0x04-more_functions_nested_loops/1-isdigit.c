@@ -6,7 +6,7 @@
 * Return: 1 if c is a digit or else 0
  */
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 	{
