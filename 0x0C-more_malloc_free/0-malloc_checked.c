@@ -4,12 +4,13 @@
  * malloc_checked - Allocates memory
  * @b : int
  *
- * Return : pointer to allocated memory
+ * Return: pointer to allocated memory
  */
 void *malloc_checked(unsigned int b)
 {
-	int *ptr = malloc(b);
+	int *ptr;
 
+	ptr = malloc(b);
 	if (ptr == NULL)
 	{
 		free(ptr);
