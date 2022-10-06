@@ -30,14 +30,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n >= s2Count)
 	{
-		totalCount = s1Count + s2Count;
-		ptr = malloc(totalCount + 1);
+		n = s2Count;
 	}
-	else
-	{
-		totalCount = s1Count + n;
-		ptr = malloc(totalCount + 1);
-	}
+	totalCount = s1Count + n;
+	ptr = malloc(totalCount + 1);
 	if (ptr == NULL)
 	{
 		free(ptr);
@@ -54,5 +50,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			ptr[i] = s2[i - s1Count];
 		}
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }
