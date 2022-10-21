@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "lists.h"
 /**
  * list_len - returns number of elements in a linked list
