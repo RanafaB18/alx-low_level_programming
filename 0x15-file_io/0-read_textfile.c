@@ -26,7 +26,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	read(fd, buffer, letters);
-	buffer[letters] = '\0';
 	close(fd);
 	for (i = 0; buffer[i] != '\0'; i++)
 	{
