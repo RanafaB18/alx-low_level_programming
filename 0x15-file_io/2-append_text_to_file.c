@@ -8,6 +8,8 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, i;
+	int bytes;
+
 	if (access(filename, F_OK) == 0)
 	{
 		return (1);
@@ -24,12 +26,16 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (1);
 	}
-	fd = open(filename, O_APPEND);
+	fd = open(filename, O_WRONLY | O_APPEND);
 	for (i = 0; text_content[i] != '\0'; i++)
 	{
 		;
 	}
-	write(fd, text_content, i);
+	bytes = write(fd, text_content, i);
+	if (bytes == -1)
+	{
+		return (-1);
+	}
 	close(fd);
 	return (1);
 }
