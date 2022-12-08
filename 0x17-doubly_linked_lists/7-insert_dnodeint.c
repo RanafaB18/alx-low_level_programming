@@ -10,7 +10,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *temp = *h, *newNode = malloc(sizeof(dlistint_t));
 	unsigned int count = 0;
-	
+
 	if (!newNode)
 		return (NULL);
 	newNode->prev = NULL;
