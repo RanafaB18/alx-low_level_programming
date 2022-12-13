@@ -1,3 +1,4 @@
+#include <unistd.h>
 /**
  * rand - returns each of the clients numbers when called
  * Return: 0
