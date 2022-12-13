@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  * rand - returns each of the clients numbers when called
  * Return: 0
@@ -19,5 +20,5 @@ int rand(void)
 		return (75);
 	if (val == 5)
 		return (9);
-	return val  % 1234;
+	return (val  % 1234);
 }
