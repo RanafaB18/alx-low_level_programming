@@ -4,7 +4,8 @@
  */
 int rand(void)
 {
-	static int val = 4;
+	static int val = -1;
+	int a, m, random, seed = 1234;
 
 	val++;
 	if (val == 0)
@@ -31,5 +32,9 @@ int rand(void)
 	{
 		return (9);
 	}
-	return (0);
+	a = 16807;
+	m = 214748;
+	seed = (a * seed) % m;
+	random = seed / m;
+	return (random);
 }
