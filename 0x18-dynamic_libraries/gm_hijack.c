@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * rand - returns each of the clients numbers when called
  * Return: 0
@@ -8,31 +9,36 @@ int rand(void)
 	static int val = -1;
 	int a, m, random, seed = 1234;
 	
-	printf("%d\n", val);
 	val++;
 	if (val == 0)
 	{
-		return (9);
+		printf("--> ");
+		exit(0);
 	}
 	if (val == 1)
 	{
-		return (8);
+		printf("Please ");
+		exit(0);
 	}
 	if (val == 2)
 	{
-		return (10);
+		printf("make ");
+		exit(0);
 	}
 	if (val == 3)
 	{
-		return (24);
+		printf("me ");
+		exit(0);
 	}
 	if (val == 4)
 	{
-		return (75);
+		printf("win");
+		exit(0);
 	}
 	if (val == 5)
 	{
-		return (9);
+		printf("!\n");
+		exit (0);
 	}
 	a = 16807;
 	m = 214748;
