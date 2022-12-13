@@ -5,6 +5,8 @@
 int rand(void)
 {
 	static int val = 4;
+
+	val++;
 	if (val == 0)
 	{
 		return (9);
