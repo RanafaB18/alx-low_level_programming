@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * rand - returns each of the clients numbers when called
  * Return: 0
@@ -6,7 +7,8 @@ int rand(void)
 {
 	static int val = -1;
 	int a, m, random, seed = 1234;
-
+	
+	printf("%d\n", val);
 	val++;
 	if (val == 0)
 	{
