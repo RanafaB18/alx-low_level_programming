@@ -1,7 +1,12 @@
+/**
+ * rand - returns each of the clients numbers when called
+ * Return: 0
+ */
 int rand(void)
 {
 	static int val = -1;
 	val++;
+
 	if (val == 0)
 	{
 		return (9);
