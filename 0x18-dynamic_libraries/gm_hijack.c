@@ -4,9 +4,7 @@
  */
 int rand(void)
 {
-	static int val = -1;
-
-	val++;
+	static int val = 4;
 	if (val == 0)
 	{
 		return (9);
