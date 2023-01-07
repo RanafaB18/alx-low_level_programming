@@ -2,6 +2,7 @@
 /**
  * hash_table_create - Creates a hash table
  * @size: size of hash table
+ *
  * Return: memory address of hash table
  */
 hash_table_t *hash_table_create(unsigned long int size)
